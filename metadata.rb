@@ -1,11 +1,11 @@
-maintainer       "Draker"
-maintainer_email "devops@drakerenergy.com"
+maintainer       "Micah Winkelspecht"
+maintainer_email "micah@gem.co"
 license          "MIT"
-description      "Configure and deploy sidekiq on opsworks."
+description      "Configure and deploy sidekiq with Redis on opsworks."
 
-name   'opsworks_sidekiq'
-recipe 'opsworks_sidekiq::setup',     'Set up sidekiq worker.'
-recipe 'opsworks_sidekiq::configure', 'Configure sidekiq worker.'
-recipe 'opsworks_sidekiq::deploy',    'Deploy sidekiq worker.'
-recipe 'opsworks_sidekiq::undeploy',  'Undeploy sidekiq worker.'
-recipe 'opsworks_sidekiq::stop',      'Stop sidekiq worker.'
+name   'opsworks-sidekiq-redis'
+recipe 'opsworks-sidekiq-redis::setup',     'Set up sidekiq worker.'
+recipe 'opsworks-sidekiq-redis::configure', 'Configure sidekiq worker.'
+recipe 'opsworks-sidekiq-redis::deploy',    'Deploy sidekiq worker.'
+recipe 'opsworks-sidekiq-redis::undeploy',  'Undeploy sidekiq worker.'
+recipe 'opsworks-sidekiq-redis::stop',      'Stop sidekiq worker.'

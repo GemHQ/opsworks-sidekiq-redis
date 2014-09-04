@@ -23,14 +23,14 @@ node[:deploy].each do |application, deploy|
     end
   end
 
-  template "#{deploy[:deploy_to]}/shared/config/memcached.yml" do
-    source "memcached.yml.erb"
+  template "#{deploy[:deploy_to]}/shared/config/redis.yml" do
+    source "redis.yml.erb"
     cookbook 'rails'
     mode "0660"
     group deploy[:group]
     owner deploy[:user]
     variables(
-      :memcached => deploy[:memcached] || {},
+      :redis => deploy[:redis] || {},
       :environment => deploy[:rails_env]
     )
 
